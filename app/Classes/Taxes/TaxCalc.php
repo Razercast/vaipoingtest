@@ -18,12 +18,6 @@ class TaxCalc {
     private $ipn;
 
     private $hasVichet;
-//    private $workDays = 22;
-//    private $factDays;
-//    private $month;
-//    private $year;
-//    private $isRetired;
-//    private $invalid;
 
     public function __construct($salary,$hasVichet) {
         $this->hasVichet = $hasVichet;
@@ -33,13 +27,6 @@ class TaxCalc {
         $this->osms = $this->calcOSMS($salary);
         $this->co = $this->calcСО($salary);
         $this->ipn = $this->calcIPN($salary);
-
-//        $this->workDays = $workDays;
-//        $this->factDays = $factDays;
-//        $this->month = $month;
-//        $this->year = $year;
-//        $this->isRetired = $isRetired;
-//        $this->invalid = $invalid;
     }
 
     public function getTaxesArray() {

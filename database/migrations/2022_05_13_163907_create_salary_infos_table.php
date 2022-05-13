@@ -15,7 +15,16 @@ class CreateSalaryInfosTable extends Migration
     {
         Schema::create('salary_infos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            $table->integer('salary');
+            $table->integer('defaultdays');
+            $table->integer('workdays');
+            $table->boolean('hasvichet');
+            $table->boolean('isretired');
+            $table->integer('month');
+            $table->integer('year');
+            $table->integer('invalid');
+            $table->double('itog');
+            $table->timestamps(); //Думаю можно будет оставить добавив обработку ну не знаю в общем
         });
     }
 

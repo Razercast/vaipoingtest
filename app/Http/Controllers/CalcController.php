@@ -19,7 +19,5 @@ class CalcController extends Controller
             $itog = $salaryCalc->calcSalary();
             return view("calc_form_res",compact("itog","taxes"));
         }
-
-
     }
 }
